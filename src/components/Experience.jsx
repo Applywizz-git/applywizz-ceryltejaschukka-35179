@@ -124,11 +124,11 @@ export default function Experience() {
                             <span className="px-3 py-1 rounded-xl text-xs font-mono font-bold bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 shadow-[0_0_12px_rgba(6,182,212,0.25)]">
                               {exp.company}
                             </span>
-                            {exp.client && (
-                              <span className="px-3 py-1 rounded-xl text-xs font-mono bg-indigo-950/70 border border-indigo-500/30 text-indigo-300">
-                                {exp.client.startsWith('Domain') ? exp.client : `Client: ${exp.client}`}
-                              </span>
-                            )}
+                          {exp.client && idx !== 0 && (
+  <span className="px-3 py-1 rounded-xl text-xs font-mono bg-indigo-950/70 border border-indigo-500/30 text-indigo-300">
+    {exp.client.startsWith('Domain') ? exp.client : `Client: ${exp.client}`}
+  </span>
+)}
                           </div>
 
                           <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400">
