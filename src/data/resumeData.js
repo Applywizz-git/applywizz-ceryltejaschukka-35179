@@ -68,7 +68,7 @@ export const resumeData = {
       role: "Data Engineer",
       period: "Jul 2026 - Present",
       company: "Star Tech Networks Inc.",
-      client: "Google",
+      client: " ",
       location: "USA",
       metrics: [
         { label: "Query Speed", value: "+25%" },
@@ -84,7 +84,7 @@ export const resumeData = {
     },
     {
       id: "truist-bank",
-      role: "Cloud Data Engineer",
+      role: "Cloud Data Engineer Intern",
       period: "May 2025 - May 2026",
       company: "Truist Bank",
       client: null,
