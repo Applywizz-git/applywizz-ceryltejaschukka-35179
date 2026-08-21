@@ -39,7 +39,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-cyan-950/80 border border-cyan-500/50 text-cyan-300 text-xs font-mono shadow-[0_0_25px_rgba(6,182,212,0.35)] backdrop-blur-md">
             <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping" />
             <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 -ml-4.5" />
-            <span className="font-semibold">Data Engineer @ Star Tech Networks Inc. (Client: Google)</span>
+            <span className="font-semibold">Data Engineer @ Star Tech Networks Inc</span>
           </div>
         </div>
 
