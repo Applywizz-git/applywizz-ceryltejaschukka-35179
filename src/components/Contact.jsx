@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Copy, Check, Send, ExternalLink, Github } from 'lucide-react';
+import { Mail, Phone, MapPin, Copy, Check, Send, ExternalLink } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { resumeData } from '../data/resumeData';
 import { sound } from '../utils/audio';
 import Icon3D from './Icon3D';
+import GitHubIcon from './GitHubIcon';
 
 export default function Contact() {
   const { personal } = resumeData;
@@ -247,7 +248,7 @@ export default function Contact() {
           <div className="p-6 rounded-3xl bg-[#0c1220] border border-slate-800 hover:border-emerald-500/60 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between h-full group shadow-xl hover:shadow-[0_15px_35px_rgba(16,185,129,0.15)] relative z-20">
             <div>
               <div className="mb-4">
-                <Icon3D icon={Github} color="emerald" size="md" />
+                <Icon3D icon={GitHubIcon} color="emerald" size="md" />
               </div>
               <div className="text-[11px] font-mono text-slate-400 uppercase mb-1">
                 GitHub Profile

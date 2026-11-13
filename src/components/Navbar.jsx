@@ -8,11 +8,11 @@ import {
   Send, 
   Cpu, 
   User, 
-  Download,
-  Github
+  Download
 } from 'lucide-react';
 import { resumeData } from '../data/resumeData';
 import { sound } from '../utils/audio';
+import GitHubIcon from './GitHubIcon';
 
 export default function Navbar({ activeSection }) {
   const { personal } = resumeData;
@@ -123,7 +123,7 @@ export default function Navbar({ activeSection }) {
             title="View GitHub Profile"
             aria-label="GitHub Profile"
           >
-            <Github className="w-4 h-4" />
+            <GitHubIcon className="w-4 h-4" />
             <span className="hidden sm:inline">GitHub</span>
           </a>
           <a
@@ -188,7 +188,7 @@ export default function Navbar({ activeSection }) {
             rel="noopener noreferrer"
             className="w-full py-3 mb-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 text-xs font-bold flex items-center justify-center gap-2"
           >
-            <Github className="w-4 h-4" />
+            <GitHubIcon className="w-4 h-4" />
             <span>GitHub Profile</span>
           </a>
           <a

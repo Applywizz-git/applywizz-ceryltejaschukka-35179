@@ -1,7 +1,8 @@
 import React from 'react';
-import { ArrowUp, Download, Github } from 'lucide-react';
+import { ArrowUp, Download } from 'lucide-react';
 import { resumeData } from '../data/resumeData';
 import { sound } from '../utils/audio';
+import GitHubIcon from './GitHubIcon';
 
 export default function Footer() {
   const { personal } = resumeData;
@@ -34,7 +35,7 @@ export default function Footer() {
               onClick={() => sound.playClick()}
               className="text-emerald-400 hover:underline flex items-center gap-1 font-bold"
             >
-              <Github className="w-3.5 h-3.5" />
+              <GitHubIcon className="w-3.5 h-3.5" />
               <span>GitHub</span>
             </a>
             <span className="text-slate-700">|</span>

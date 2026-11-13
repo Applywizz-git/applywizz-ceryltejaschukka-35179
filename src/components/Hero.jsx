@@ -12,13 +12,13 @@ import {
   TrendingUp,
   Server,
   Layers,
-  Cpu,
-  Github
+  Cpu
 } from 'lucide-react';
 import { resumeData } from '../data/resumeData';
 import { sound } from '../utils/audio';
 import Card3D from './Card3D';
 import Icon3D from './Icon3D';
+import GitHubIcon from './GitHubIcon';
 
 export default function Hero() {
   const { personal, keyMetrics } = resumeData;
@@ -86,7 +86,7 @@ export default function Hero() {
               onClick={() => sound.playClick()}
               className="flex items-center gap-2.5 text-slate-300 hover:text-emerald-300 transition-colors group cursor-pointer"
             >
-              <Icon3D icon={Github} color="emerald" size="sm" />
+              <Icon3D icon={GitHubIcon} color="emerald" size="sm" />
               <span className="group-hover:underline">github.com/cerylchukka-86</span>
             </a>
             <span className="hidden sm:inline text-slate-700">|</span>
@@ -163,7 +163,7 @@ export default function Hero() {
               onClick={() => sound.playClick()}
               className="btn-3d px-5 py-3.5 rounded-2xl bg-[#090e1a] border border-emerald-500/40 text-emerald-300 font-bold text-xs sm:text-sm hover:border-emerald-400 flex items-center gap-2 cursor-pointer"
             >
-              <Github className="w-4 h-4 text-emerald-400" />
+              <GitHubIcon className="w-4 h-4 text-emerald-400" />
               <span>View GitHub</span>
             </a>
           </div>
