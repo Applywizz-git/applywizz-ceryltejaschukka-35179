@@ -7,6 +7,7 @@ export const resumeData = {
     relocation: "Open to Relocate",
     phone: "+1 (983) 218-2852",
     email: "ceryl.chukka@applywizard.ai",
+    github: "https://github.com/cerylchukka-86",
     portfolio: "Portfolio",
     summary: `Data Engineer with 4+ years of experience building reliable data pipelines, warehouse models, and reporting datasets across network operations, banking, recruitment analytics, and business reporting environments. Experienced in turning raw logs, KPI feeds, customer records, transaction data, and operational inputs into clean, structured datasets for reporting, SLA tracking, and business decision-making. Works closely with operations, analytics, and business teams to strengthen data quality, query performance, and visibility into key performance trends. Completed an M.S. in Information Systems from the University of Colorado Denver, with a strong foundation in database management, data warehousing, business intelligence, and systems analysis.`
   },

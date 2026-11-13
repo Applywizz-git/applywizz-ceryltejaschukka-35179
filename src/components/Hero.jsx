@@ -12,7 +12,8 @@ import {
   TrendingUp,
   Server,
   Layers,
-  Cpu
+  Cpu,
+  Github
 } from 'lucide-react';
 import { resumeData } from '../data/resumeData';
 import { sound } from '../utils/audio';
@@ -75,6 +76,18 @@ export default function Hero() {
             >
               <Icon3D icon={Phone} color="indigo" size="sm" />
               <span className="group-hover:underline">{personal.phone}</span>
+            </a>
+            <span className="hidden sm:inline text-slate-700">|</span>
+            <a
+              href={personal.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseEnter={() => sound.playHover()}
+              onClick={() => sound.playClick()}
+              className="flex items-center gap-2.5 text-slate-300 hover:text-emerald-300 transition-colors group cursor-pointer"
+            >
+              <Icon3D icon={Github} color="emerald" size="sm" />
+              <span className="group-hover:underline">github.com/cerylchukka-86</span>
             </a>
             <span className="hidden sm:inline text-slate-700">|</span>
             <span className="flex items-center gap-2.5 text-slate-400">
@@ -140,6 +153,18 @@ export default function Hero() {
             >
               <FileText className="w-4 h-4 text-cyan-400" />
               <span>Download Resume PDF</span>
+            </a>
+
+            <a
+              href={personal.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseEnter={() => sound.playHover()}
+              onClick={() => sound.playClick()}
+              className="btn-3d px-5 py-3.5 rounded-2xl bg-[#090e1a] border border-emerald-500/40 text-emerald-300 font-bold text-xs sm:text-sm hover:border-emerald-400 flex items-center gap-2 cursor-pointer"
+            >
+              <Github className="w-4 h-4 text-emerald-400" />
+              <span>View GitHub</span>
             </a>
           </div>
         </div>

@@ -8,11 +8,14 @@ import {
   Send, 
   Cpu, 
   User, 
-  Download 
+  Download,
+  Github
 } from 'lucide-react';
+import { resumeData } from '../data/resumeData';
 import { sound } from '../utils/audio';
 
 export default function Navbar({ activeSection }) {
+  const { personal } = resumeData;
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -108,8 +111,21 @@ export default function Navbar({ activeSection }) {
           })}
         </nav>
 
-        {/* Right Action: 3D Tactile Download Resume Button */}
+        {/* Right Action: GitHub + 3D Tactile Download Resume Button */}
         <div className="flex items-center gap-2 sm:gap-3">
+          <a
+            href={personal.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            onMouseEnter={() => sound.playHover()}
+            onClick={() => sound.playClick()}
+            className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-cyan-500/40 transition-colors text-xs font-bold font-sans cursor-pointer"
+            title="View GitHub Profile"
+            aria-label="GitHub Profile"
+          >
+            <Github className="w-4 h-4" />
+            <span className="hidden sm:inline">GitHub</span>
+          </a>
           <a
             href="/Resume.pdf"
             download="Ceryl_Tejas_Chukka_Resume.pdf"
@@ -166,6 +182,15 @@ export default function Navbar({ activeSection }) {
             })}
           </div>
 
+          <a
+            href={personal.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full py-3 mb-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 text-xs font-bold flex items-center justify-center gap-2"
+          >
+            <Github className="w-4 h-4" />
+            <span>GitHub Profile</span>
+          </a>
           <a
             href="/Resume.pdf"
             download="Ceryl_Tejas_Chukka_Resume.pdf"

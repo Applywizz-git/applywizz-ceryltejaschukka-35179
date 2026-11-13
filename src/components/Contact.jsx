@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Copy, Check, Send, ExternalLink } from 'lucide-react';
+import { Mail, Phone, MapPin, Copy, Check, Send, ExternalLink, Github } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { resumeData } from '../data/resumeData';
 import { sound } from '../utils/audio';
@@ -109,12 +109,12 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-slate-400 text-sm mt-1">
-            Available for Senior Data Engineering opportunities. Connect directly via email or phone.
+            Available for Senior Data Engineering opportunities. Connect via email, phone, or GitHub.
           </p>
         </div>
 
         {/* Contact Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
           {/* Email Card */}
           <div className="p-6 rounded-3xl bg-[#0c1220] border border-slate-800 hover:border-cyan-500/60 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between h-full group shadow-xl hover:shadow-[0_15px_35px_rgba(6,182,212,0.15)] relative z-20">
             <div>
@@ -240,6 +240,43 @@ export default function Contact() {
             <div className="pt-3.5 border-t border-slate-800 text-[11px] font-mono text-slate-400 flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
               <span>United States Work Authorization</span>
+            </div>
+          </div>
+
+          {/* GitHub Card */}
+          <div className="p-6 rounded-3xl bg-[#0c1220] border border-slate-800 hover:border-emerald-500/60 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between h-full group shadow-xl hover:shadow-[0_15px_35px_rgba(16,185,129,0.15)] relative z-20">
+            <div>
+              <div className="mb-4">
+                <Icon3D icon={Github} color="emerald" size="md" />
+              </div>
+              <div className="text-[11px] font-mono text-slate-400 uppercase mb-1">
+                GitHub Profile
+              </div>
+              <a
+                href={personal.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => sound.playHover()}
+                onClick={() => sound.playClick()}
+                className="text-sm font-mono text-white hover:text-emerald-300 transition-colors break-all block mb-4 font-semibold"
+                title="Open GitHub profile"
+              >
+                github.com/cerylchukka-86
+              </a>
+            </div>
+
+            <div className="pt-3.5 border-t border-slate-800">
+              <a
+                href={personal.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => sound.playHover()}
+                onClick={() => sound.playClick()}
+                className="btn-3d w-full py-2.5 px-3 rounded-xl bg-[#0e1628] border border-emerald-500/40 text-emerald-300 text-xs font-mono font-bold hover:text-white transition-all text-center flex items-center justify-center gap-1.5 cursor-pointer shadow-lg active:scale-95"
+              >
+                <span>View GitHub</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
             </div>
           </div>
         </div>
